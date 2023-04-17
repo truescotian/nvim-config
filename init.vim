@@ -16,10 +16,21 @@ set guicursor=""
 syntax on
 set spell " enable spell check (may need to download language package)
 set ttyfast " Speed up scrolling in Vim
+set scrolloff=8
+set colorcolumn="80"
 
 let mapleader = " "
 
 nnoremap <leader>pv <cmd>Ex<cr>
+" while highlighting lines, move all of them
+vnoremap <S-k> :m '<-2<CR>gv=gv
+vnoremap <S-j> :m '>+1<CR>gv=gv
+" keeps cursor in middle of screen when page jumping
+nnoremap <C-d> <C-d>zz<CR>
+nnoremap <C-u> <C-u>zz<CR>
+" search terms to stay in the middle
+nnoremap n nzzzv<CR>
+
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 Plug 'nvim-lua/plenary.nvim'
