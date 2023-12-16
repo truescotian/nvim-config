@@ -31,7 +31,6 @@ nnoremap <C-u> <C-u>zz<CR>
 " search terms to stay in the middle
 nnoremap n nzzzv<CR>
 
-
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 Plug 'nvim-lua/plenary.nvim'
 Plug 'morhetz/gruvbox'
@@ -58,6 +57,8 @@ Plug 'ray-x/guihua.lua'
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'theHamsta/nvim-dap-virtual-text'
+Plug 'christoomey/vim-tmux-navigator'
+
 call plug#end()
 
 colorscheme gruvbox
